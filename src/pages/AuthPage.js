@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from "react";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+import useStateCallback from "../util/useStateCallback";
 
 function AuthPage(props) {
   const [loginPage, setLoginPage] = useState(false);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useStateCallback([]);
   console.log(props);
-  useEffect(() => {
-    if (localStorage.getItem("users")) {
-      setUsers(JSON.parse(localStorage.getItem("users")));
-    } else {
-      localStorage.setItem("users", JSON.stringify(users));
-    }
-  }, []);
 
   return (
-    <div>
-      <div>
-        <div onClick={() => setLoginPage(true)}>
-          <h1>LOGIN</h1>
-        </div>
-        <div onClick={() => setLoginPage(false)}>
-          <h1>SIGNUP</h1>
-        </div>
+    <div className="lg:w-2/6 md:w-3/5 sm:w-5/6 w-11/12 mx-auto md:my-10 my-5 shadow-2xl">
+      <div
+        className={loginPage ? "active default" : "default"}
+        onClick={() => setLoginPage(true)}
+      >
+        <h1>LOG IN</h1>
       </div>
-      {loginPage && <Login {...props} users={users} />}
-      {!loginPage && <Signup {...props} users={users} setUsers={setUsers} />}
+      <div
+        className={!loginPage ? "active default" : "default"}
+        onClick={() => setLoginPage(false)}
+      >
+        <h1>SIGN UP</h1>
+      </div>
+      <div className="bg-primary-100">
+        {loginPage && <Login />}
+        {!loginPage && <Signup />}
+      </div>
     </div>
   );
 }
