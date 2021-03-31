@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import AuthRoute from "./util/AuthRoute";
+import AuthPage from "./pages/AuthPage";
+import PrivateRoute from "./util/PrivateRoute";
+import Search from "./pages/Search";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("authState")) {
+      setAuthenticated(true);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <AuthRoute
+            exact
+            path="/"
+            component={AuthPage}
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+          <PrivateRoute
+            exact
+            path="/search"
+            component={Search}
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </Switch>
+      </Router>
     </div>
   );
 }
