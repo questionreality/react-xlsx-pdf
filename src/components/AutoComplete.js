@@ -78,6 +78,7 @@ function AutoComplete() {
           type="text"
           className={`input input-autocomplete`}
           value={searchInput}
+          placeholder="Search the data"
           onChange={(e) => {
             setSearchInput(e.target.value.toLowerCase());
           }}
