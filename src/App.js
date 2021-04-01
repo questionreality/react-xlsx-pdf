@@ -6,7 +6,7 @@ import AuthPage from "./pages/AuthPage";
 import PrivateRoute from "./util/PrivateRoute";
 import Search from "./pages/Search";
 
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { HashRouter as Router, Switch } from "react-router-dom";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(
