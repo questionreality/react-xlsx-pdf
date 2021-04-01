@@ -34,6 +34,7 @@ module.exports = {
   variants: {
     extend: {
       padding: ["first"],
+      borderWidth: ["last"],
     },
   },
   plugins: [],
