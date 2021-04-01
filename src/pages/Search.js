@@ -36,7 +36,7 @@ function Search() {
       ) : loading === "state3" ? (
         <div className="flex flex-col md:px-10">
           <AutoComplete />{" "}
-          <div className="flex flex-row flex-center">
+          <div className="flex flex-col sm:flex-row flex-center mt-6">
             <Download /> <Logout />
           </div>
         </div>

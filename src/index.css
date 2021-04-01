@@ -57,7 +57,7 @@
     @apply bg-green-900 text-green-100;
   }
   .input-autocomplete {
-    @apply w-1/2 mx-auto block mb-0 text-gray-900 rounded-none shadow-md;
+    @apply md:w-1/2 md:mx-auto block  mb-0 text-gray-900 rounded-none shadow-md;
   }
   .input-autocomplete:focus {
     @apply shadow-md  border-gray-500;

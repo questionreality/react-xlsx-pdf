@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../util/Context";
+import { jsPDF } from "jspdf";
 
 function Download() {
+  const { userInputs, setUserInputs } = useContext(DataContext);
+  const downloadPdf = () => {
+    const doc = new jsPDF();
+    userInputs.forEach((element, i) => {
+      doc.text(String(element), 10, 10 * (i + 1));
+    });
+    doc.save("userInput.pdf");
+    console.log(doc);
+  };
   return (
-    <button className="mr-auto btn-green btn  btn-large">Download as pdf</button>
+    <button
+      className="sm:mr-auto mb-5 sm:mb-0 btn-green btn  btn-large"
+      onClick={downloadPdf}
+    >
+      Download as pdf
+    </button>
   );
 }
 

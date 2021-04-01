@@ -6,7 +6,6 @@ import AuthPage from "./pages/AuthPage";
 import PrivateRoute from "./util/PrivateRoute";
 import Search from "./pages/Search";
 
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -19,8 +18,8 @@ function App() {
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("data")) || []
   );
-  const [searchData, setSearchData] = useState(
-    JSON.parse(localStorage.getItem("searchData")) || []
+  const [userInputs, setUserInputs] = useState(
+    JSON.parse(localStorage.getItem("userInputs")) || []
   );
 
   const contextData = {
@@ -28,8 +27,8 @@ function App() {
     setAuthenticated,
     users,
     setUsers,
-    searchData,
-    setSearchData,
+    userInputs,
+    setUserInputs,
     data,
     setData,
   };
