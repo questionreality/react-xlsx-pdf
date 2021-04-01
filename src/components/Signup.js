@@ -55,6 +55,30 @@ function Signup() {
       <button className="btn" type="submit" onClick={handleSubmit}>
         CREATE ACCOUNT
       </button>
+      <p className="text-gray-700 mt-2  mx-auto w-full text-center cursor-pointer text-xs inline-block">
+        By clicking Create Account, you agree to our{" "}
+        <a href="#" className="underline text-primary-700">
+          {" "}
+          Terms{" "}
+        </a>{" "}
+        and{" "}
+        <a href="#" className="underline text-primary-700">
+          {" "}
+          Cookie Policy
+        </a>
+        .
+      </p>
+      <div className="google-btn">
+        <div className="google-icon-wrapper">
+          <img
+            className="google-icon-svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          />
+        </div>
+        <p className="btn-text">
+          <b>Sign up with Google</b>
+        </p>
+      </div>
     </form>
   );
 }

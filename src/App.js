@@ -6,6 +6,7 @@ import AuthPage from "./pages/AuthPage";
 import PrivateRoute from "./util/PrivateRoute";
 import Search from "./pages/Search";
 
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -33,11 +34,7 @@ function App() {
     setData,
   };
   console.log(contextData);
-  useEffect(() => {
-    if (localStorage.getItem("authState")) {
-      setAuthenticated(true);
-    }
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div>
       <DataContext.Provider value={contextData}>

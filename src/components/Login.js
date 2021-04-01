@@ -48,6 +48,23 @@ function Login() {
       <button type="submit" className="btn" onClick={handleSubmit}>
         LOG IN
       </button>
+      <a
+        href="#"
+        className="text-primary-700  mt-2 underline mx-auto w-full text-center cursor-pointer text-xs inline-block"
+      >
+        Forgotten password?
+      </a>
+      <div className="google-btn">
+        <div className="google-icon-wrapper">
+          <img
+            className="google-icon-svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          />
+        </div>
+        <p className="btn-text">
+          <b>Log in with Google</b>
+        </p>
+      </div>
     </form>
   );
 }
