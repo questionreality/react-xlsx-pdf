@@ -2,22 +2,22 @@ import React, { useState, useContext } from "react";
 import { DataContext } from "../util/Context";
 
 function Login() {
-  const { setAuthenticated, users, setUsers } = useContext(DataContext);
+  const { setAuthenticated } = useContext(DataContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (
-      users.find((user) => user.email === email && user.password === password)
-    ) {
-      //   setAuthenticated(true);
-    } else {
-      //   setLoginPage(false);
-    }
-    // setAuthenticated(true);
-    // localStorage.setItem("auth", "true");
+    // if (
+    //   users.find((user) => user.email === email && user.password === password)
+    // ) {
+    //   //   setAuthenticated(true);
+    // } else {
+    //   //   setLoginPage(false);
+    // }
+    setAuthenticated(true);
+    localStorage.setItem("authenticated", "true");
   };
   return (
     <form className="form">
@@ -50,14 +50,14 @@ function Login() {
       </button>
       <a
         href="#"
-        className="text-primary-700  mt-2 underline mx-auto w-full text-center cursor-pointer text-xs inline-block"
+        className="text-primary-700  mt-2 underline mx-auto w-full text-center cursor-pointer text-xs inline-block mb-2"
       >
         Forgotten password?
       </a>
       <div className="google-btn">
         <div className="google-icon-wrapper">
           <img
-          alt="google-icon"
+            alt="google-icon"
             className="google-icon-svg"
             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
           />

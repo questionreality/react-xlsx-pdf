@@ -44,7 +44,7 @@ function AutoComplete() {
   const setSuggestion = (name) => {
     setSearchInput(name);
     setDisplay(false);
-    saveUserInput(JSON.stringify(name));
+    saveUserInput(String(name));
   };
   return (
     <div>

@@ -6,7 +6,7 @@ import FileInput from "../components/FileInput";
 import Logout from "../components/Logout";
 import Loader from "react-loader-spinner";
 
-function Search() {
+function Search(props) {
   const { data, setData } = useContext(DataContext);
   // state1 - input visible, nothing else visible
   // state2 - input visible, loader visible
@@ -37,7 +37,7 @@ function Search() {
         <div className="flex flex-col md:px-10">
           <AutoComplete />{" "}
           <div className="flex flex-col sm:flex-row flex-center mt-6">
-            <Download /> <Logout />
+            <Download /> <Logout {...props}/>
           </div>
         </div>
       ) : null}

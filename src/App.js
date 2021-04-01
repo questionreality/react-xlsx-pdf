@@ -10,10 +10,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(
-    localStorage.getItem("auth") === "true" ? true : false
-  );
-  const [users, setUsers] = useState(
-    JSON.parse(localStorage.getItem("users")) || []
+    localStorage.getItem("authenticated") === "true" ? true : false
   );
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("data")) || []
@@ -25,8 +22,8 @@ function App() {
   const contextData = {
     authenticated,
     setAuthenticated,
-    users,
-    setUsers,
+    // users,
+    // setUsers,
     userInputs,
     setUserInputs,
     data,

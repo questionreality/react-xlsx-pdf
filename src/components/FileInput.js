@@ -51,7 +51,7 @@ function FileInput({ loading, setLoading }) {
           }}
         />
         <span className="text-lg">☝️</span>
-        <span className="text-primary-700 bg-primary-50 underline font-semibold">
+        <span className="text-primary-700 sm:text-lg bg-primary-50 underline font-semibold">
           Upload an excel file
         </span>
       </label>

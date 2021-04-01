@@ -1,18 +1,20 @@
 import React, { useState, useContext } from "react";
 import { DataContext } from "../util/Context";
 function Signup() {
-  const { setAuthenticated, users, setUsers } = useContext(DataContext);
+  const { setAuthenticated } = useContext(DataContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (users.map((users) => users.email).find((ele) => ele === email)) {
-      //   setLoginPage(true);
-    } else {
-      //   setAuthenticated(true);
-      //   localStorage.setItem("auth", "true");
-    }
+    // if (users.map((users) => users.email).find((ele) => ele === email)) {
+    //   //   setLoginPage(true);
+    // } else {
+    //   //   setAuthenticated(true);
+    //   //   localStorage.setItem("auth", "true");
+    // }
+    setAuthenticated(true);
+    localStorage.setItem("authenticated", "true");
   };
   return (
     <form className="form">
@@ -55,7 +57,7 @@ function Signup() {
       <button className="btn" type="submit" onClick={handleSubmit}>
         CREATE ACCOUNT
       </button>
-      <p className="text-gray-700 mt-2  mx-auto w-full text-center cursor-pointer text-xs inline-block">
+      <p className="text-gray-700 mt-2  mx-auto w-full text-center cursor-pointer text-xs inline-block mb-2">
         By clicking Create Account, you agree to our{" "}
         <a href="#" className="underline text-primary-700">
           {" "}
