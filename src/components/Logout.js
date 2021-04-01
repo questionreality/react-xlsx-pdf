@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../util/Context";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 function Logout(props) {
   const { setData, setAuthenticated, setUserInputs } = useContext(DataContext);

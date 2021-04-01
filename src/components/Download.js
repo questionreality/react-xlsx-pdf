@@ -3,7 +3,7 @@ import { DataContext } from "../util/Context";
 import { jsPDF } from "jspdf";
 
 function Download() {
-  const { userInputs, setUserInputs } = useContext(DataContext);
+const { userInputs } = useContext(DataContext);
   const downloadPdf = () => {
     const doc = new jsPDF();
     userInputs.forEach((element, i) => {

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
-import useStateCallback from "../util/useStateCallback";
 
 function AuthPage(props) {
   const [loginPage, setLoginPage] = useState(false);
-  const [users, setUsers] = useStateCallback([]);
   console.log(props);
 
   return (

@@ -3,7 +3,7 @@ import { DataContext } from "../util/Context";
 import * as XLSX from "xlsx";
 
 function FileInput({ loading, setLoading }) {
-  const { data, setData } = useContext(DataContext);
+  const { setData } = useContext(DataContext);
 
   const readExcel = (file) => {
     setLoading("state2");

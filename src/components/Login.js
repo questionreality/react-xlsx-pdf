@@ -49,13 +49,13 @@ function Login() {
         LOG IN
       </button>
       <a
-        href="#"
+        href="/"
         className="text-primary-700  mt-2 underline mx-auto w-full text-center cursor-pointer text-xs inline-block mb-2"
       >
         Forgotten password?
       </a>
       <div className="google-btn">
-        <div className="google-icon-wrapper">
+      <div className="google-icon-wrapper">
           <img
             alt="google-icon"
             className="google-icon-svg"

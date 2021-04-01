@@ -59,12 +59,12 @@ function Signup() {
       </button>
       <p className="text-gray-700 mt-2  mx-auto w-full text-center cursor-pointer text-xs inline-block mb-2">
         By clicking Create Account, you agree to our{" "}
-        <a href="#" className="underline text-primary-700">
+        <a href="/" className="underline text-primary-700">
           {" "}
           Terms{" "}
         </a>{" "}
         and{" "}
-        <a href="#" className="underline text-primary-700">
+        <a href="/" className="underline text-primary-700">
           {" "}
           Cookie Policy
         </a>

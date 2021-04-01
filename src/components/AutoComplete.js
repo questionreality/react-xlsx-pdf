@@ -15,7 +15,7 @@ function AutoComplete() {
     if (data.length !== 0) {
       console.log(data[0]);
       if (keys?.length === 0) {
-        for (const [key, value] of Object.entries(data[0])) {
+        for (const [key] of Object.entries(data[0])) {
           setKeys((keys) => keys.concat(key));
         }
       }

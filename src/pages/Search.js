@@ -7,7 +7,7 @@ import Logout from "../components/Logout";
 import Loader from "react-loader-spinner";
 
 function Search(props) {
-  const { data, setData } = useContext(DataContext);
+  const { data } = useContext(DataContext);
   // state1 - input visible, nothing else visible
   // state2 - input visible, loader visible
   // state3 - autocomplete,download and logout buttons visible
@@ -37,7 +37,7 @@ function Search(props) {
         <div className="flex flex-col md:px-10">
           <AutoComplete />{" "}
           <div className="flex flex-col sm:flex-row flex-center mt-6">
-            <Download /> <Logout {...props}/>
+            <Download /> <Logout {...props} />
           </div>
         </div>
       ) : null}
