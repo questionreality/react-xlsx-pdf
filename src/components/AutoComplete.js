@@ -53,7 +53,7 @@ function AutoComplete() {
         <fieldset className="radio-group w-full py-5 text-gray-800">
           {keys?.length !== 0
             ? keys?.map((key, i) => (
-                <div className="md:inline md:px-6 first:pl-0" key={i}>
+                <div className="md:inline-block md:px-6 first:pl-0" key={i}>
                   <input
                     type="radio"
                     value={key}
